@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  wordpress:
+  luxstreet:
     image: wordpress:latest
     container_name: luxstreet-wordpress
     restart: always
@@ -13,9 +13,9 @@ services:
     networks:
       - sigma-net
     depends_on:
-      - db
+      - luxstreet-db
 
-  db:
+  luxstreet-db:
     image: mariadb:10.6
     container_name: luxstreet-db
     restart: always
