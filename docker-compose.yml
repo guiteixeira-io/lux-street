@@ -1,7 +1,8 @@
 
 services:
   luxstreet:
-    image: wordpress:latest
+    image: luxstreet-wordpress
+    build: .
     container_name: luxstreet-wordpress
     restart: always
     ports:
